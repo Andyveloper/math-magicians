@@ -23,24 +23,4 @@ const RenderCalculator = () => {
   );
 };
 
-// class RenderCalculator extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       total: null,
-//       next: null,
-//       operation: null,
-//     };
-//   }
-
-//   calculate = (buttonName) => {
-//     const updateState = calculate(this.state, buttonName);
-//     this.setState(updateState);
-//   }
-
-//   render() {
-
-//   }
-// }
-
 export default RenderCalculator;
