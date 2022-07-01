@@ -1,0 +1,35 @@
+@import './buttonColors.scss';
+$button-padding: 15px;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  padding: 10px;
+}
+
+.calculator-display {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 10px;
+  border: 1px;
+  grid-column: 1 / span 4;
+  background-color: darken($number-color, 30%);
+  color: $display-color;
+}
+
+.operator {
+  background-color: $operator-color;
+  padding: $button-padding;
+}
+
+.number {
+  background-color: lighten($number-color, 10%);
+  padding: $button-padding;
+}
+
+.number[value="0"] {
+  grid-column: 1 / span 2;
+  padding: $button-padding;
+}
