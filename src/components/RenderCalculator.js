@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import calculatorButtonValues, { calculatorDisplay } from './CalculatorInfo';
-import calculate from '../logic/calculate';
-import operate from '../logic/operate';
+// import calculate from '../logic/calculate';
+// import operate from '../logic/operate';
 
 const CalculatorDisplay = () => {
   const array = calculatorDisplay.map((element) => (

@@ -28,7 +28,7 @@ const calculatorButtonValues = [
   },
   {
     name: 'divide',
-    value: '/',
+    value: '÷',
     className: 'operator',
     type: 'button',
   },
