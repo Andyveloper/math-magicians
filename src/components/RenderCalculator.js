@@ -1,31 +1,46 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import CalculatorButtons, { CalculatorDisplay } from './CalculatorInfo';
 import calculate from '../logic/calculate';
 // import operate from '../logic/operate';
 
-class RenderCalculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+const RenderCalculator = () => {
+  const [calculatorData, setCalculatorData] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  calculate = (buttonName) => {
-    const updateState = calculate(this.state, buttonName);
-    this.setState(updateState);
-  }
+  const calculation = (buttonName) => {
+    const updateState = calculate(calculatorData, buttonName);
+    setCalculatorData(updateState);
+  };
 
-  render() {
-    return (
-      <section className="grid-container">
-        <CalculatorDisplay updateDisplay={this.state} />
-        <CalculatorButtons onClick={this.calculate} />
-      </section>
-    );
-  }
-}
+  return (
+    <section className="grid-container">
+      <CalculatorDisplay updateDisplay={calculatorData} />
+      <CalculatorButtons onClick={calculation} />
+    </section>
+  );
+};
+
+// class RenderCalculator extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       total: null,
+//       next: null,
+//       operation: null,
+//     };
+//   }
+
+//   calculate = (buttonName) => {
+//     const updateState = calculate(this.state, buttonName);
+//     this.setState(updateState);
+//   }
+
+//   render() {
+
+//   }
+// }
 
 export default RenderCalculator;
