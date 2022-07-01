@@ -1,10 +1,13 @@
-const calculatorButtonValues = [
+export const calculatorDisplay = [
   {
     name: 'display',
     value: '0',
     className: 'calculator-display',
     type: 'text',
   },
+];
+
+const calculatorButtonValues = [
   {
     name: 'clear',
     value: 'AC',

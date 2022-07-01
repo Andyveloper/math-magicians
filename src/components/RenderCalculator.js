@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
-import calculatorButtonValues from './CalculatorInfo';
+import calculatorButtonValues, { calculatorDisplay } from './CalculatorInfo';
+
+const CalculatorDisplay = () => {
+  const array = calculatorDisplay.map((element) => (
+    <input
+      className={element.className}
+      key={element.name}
+      value={element.value}
+      type="input"
+    />
+  ));
+  return array;
+};
 
 const CalculatorButtons = () => {
   const array = calculatorButtonValues.map((element) => (
@@ -24,6 +36,7 @@ class RenderCalculator extends Component {
   render() {
     return (
       <section className="grid-container">
+        <CalculatorDisplay />
         <CalculatorButtons />
       </section>
     );
