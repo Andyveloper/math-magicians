@@ -6,6 +6,8 @@ $button-padding: 15px;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1px;
   padding: 10px;
+  max-width: 60%;
+  margin: auto;
 }
 
 .calculator-display {
@@ -22,14 +24,31 @@ $button-padding: 15px;
 .operator {
   background-color: $operator-color;
   padding: $button-padding;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .number {
   background-color: lighten($number-color, 10%);
   padding: $button-padding;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .number[value="0"] {
   grid-column: 1 / span 2;
   padding: $button-padding;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
 }

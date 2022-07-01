@@ -7,6 +7,24 @@ export const calculatorDisplay = [
   },
 ];
 
+export const CalculatorDisplay = ({ updateDisplay }) => {
+  const { total, next } = updateDisplay;
+  const array = calculatorDisplay.map((element) => (
+    <div
+      className={element.className}
+      key={element.name}
+    >
+      <span
+        value={element.value}
+        type="input"
+      >
+        {next || total || '0'}
+      </span>
+    </div>
+  ));
+  return array;
+};
+
 const calculatorButtonValues = [
   {
     name: 'clear',
@@ -28,7 +46,7 @@ const calculatorButtonValues = [
   },
   {
     name: 'divide',
-    value: '/',
+    value: '÷',
     className: 'operator',
     type: 'button',
   },
@@ -124,4 +142,19 @@ const calculatorButtonValues = [
   },
 ];
 
-export default calculatorButtonValues;
+const CalculatorButtons = ({ onClick }) => {
+  const array = calculatorButtonValues.map((element) => (
+    <button
+      onClick={() => { onClick(element.value); }}
+      className={element.className}
+      key={element.name}
+      value={element.value}
+      type="button"
+    >
+      {element.value}
+    </button>
+  ));
+  return array;
+};
+
+export default CalculatorButtons;
