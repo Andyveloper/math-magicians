@@ -15,7 +15,6 @@ class RenderCalculator extends Component {
 
   calculate = (buttonName) => {
     const updateState = calculate(this.state, buttonName);
-    console.log(updateState);
     this.setState(updateState);
   }
 
