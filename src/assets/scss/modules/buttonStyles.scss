@@ -25,6 +25,7 @@ $button-padding: 15px;
   background-color: $operator-color;
   padding: $button-padding;
   font-weight: 700;
+
   &:hover {
     opacity: 0.8;
   }
@@ -33,6 +34,7 @@ $button-padding: 15px;
 .number {
   background-color: lighten($number-color, 10%);
   padding: $button-padding;
+
   &:hover {
     opacity: 0.6;
   }
