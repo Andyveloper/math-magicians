@@ -26,10 +26,10 @@ $button-padding: 15px;
 
 .number {
   background-color: lighten($number-color, 10%);
-  padding: button-padding
+  padding: $button-padding;
 }
 
 .number[value="0"] {
   grid-column: 1 / span 2;
-  padding: button-padding;
+  padding: $button-padding;
 }
