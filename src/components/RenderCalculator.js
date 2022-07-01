@@ -1,45 +1,29 @@
 import React, { Component } from 'react';
-import calculatorButtonValues, { calculatorDisplay } from './CalculatorInfo';
-// import calculate from '../logic/calculate';
+import CalculatorButtons, { CalculatorDisplay } from './CalculatorInfo';
+import calculate from '../logic/calculate';
 // import operate from '../logic/operate';
-
-const CalculatorDisplay = () => {
-  const array = calculatorDisplay.map((element) => (
-    <input
-      className={element.className}
-      key={element.name}
-      value={element.value}
-      type="input"
-    />
-  ));
-  return array;
-};
-
-const CalculatorButtons = () => {
-  const array = calculatorButtonValues.map((element) => (
-    <button
-      className={element.className}
-      key={element.name}
-      value={element.value}
-      type="button"
-    >
-      {element.value}
-    </button>
-  ));
-  return array;
-};
 
 class RenderCalculator extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
+
+  calculate = (buttonName) => {
+    const updateState = calculate(this.state, buttonName);
+    console.log(updateState);
+    this.setState(updateState);
   }
 
   render() {
     return (
       <section className="grid-container">
-        <CalculatorDisplay />
-        <CalculatorButtons />
+        <CalculatorDisplay updateDisplay={this.state} />
+        <CalculatorButtons onClick={this.calculate} />
       </section>
     );
   }
