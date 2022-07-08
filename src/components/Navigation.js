@@ -40,6 +40,7 @@ const Home = () => (
       Math Magicians is an innovative web application that allows slideshow-style
       browsing of complex mathematics topics. This application allows users to use
       the advanced calculator and other tools to calculate what they need.
+
     </p>
     <p>
       Math Magic is a revolutionary web application that allows the user to
