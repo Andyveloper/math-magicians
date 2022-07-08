@@ -85,7 +85,7 @@ const Quote = () => {
 
   return (
     <div className="quote">
-      <h2 className="quote-title">Welcome to the Math Magicians</h2>
+      <h2 className="quote-title">Your Daily Math Quote</h2>
       <p className="quote-text">
         {text}
       </p>

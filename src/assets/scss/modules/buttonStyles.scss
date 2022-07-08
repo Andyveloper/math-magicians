@@ -10,13 +10,13 @@ $button-padding: 15px;
 }
 
 .calculator-display {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
   text-align: right;
   padding: 10px;
   border: 1px;
   grid-column: 1 / span 4;
-  background-color: darken($number-color, 30%);
+  background-color: darken($number-color, 40%);
   color: $display-color;
 }
 
@@ -31,8 +31,11 @@ $button-padding: 15px;
 }
 
 .number {
-  background-color: lighten($number-color, 10%);
+  background-color: $background-color-nav;
   padding: $button-padding;
+  &[value] {
+    color: white;
+  }
 
   &:hover {
     opacity: 0.6;
