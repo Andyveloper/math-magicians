@@ -1,10 +1,10 @@
-$background-color-nav: #3aafa9;
-$background-color: #def2f1;
+$background-color-nav: #fff;
+$background-color: #62478A;
 $border-color: #e5e5e5;
-$link-color: #fff;
-$link-hover-color: #4812fc;
-$link-active-color: #4812fc;
-$text-color: #17252a;
+$link-color: #62478A;
+$link-hover-color: #62478A;
+$link-active-color: #62478A;
+$text-color: #fff;
 
 @mixin flex-direction($direction) {
   display: flex;
