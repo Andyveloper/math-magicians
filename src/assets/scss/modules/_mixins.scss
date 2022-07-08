@@ -1,0 +1,16 @@
+$background-color-nav: #3aafa9;
+$background-color: #def2f1;
+$border-color: #e5e5e5;
+$link-color: #fff;
+$link-hover-color: #4812fc;
+$link-active-color: #4812fc;
+$text-color: #17252a;
+
+
+@mixin flex-direction($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
