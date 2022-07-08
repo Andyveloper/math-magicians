@@ -4,8 +4,10 @@
   padding: 1rem;
   background-color: $background-color-nav;
   border-color: $border-color;
+
   &-nav {
     @include flex-direction(row);
+
     li {
       &::before {
         content: "|";
@@ -14,19 +16,23 @@
       }
     }
   }
+
   &-nav > li > a {
     transition: all 0.3s ease-in-out;
     color: $link-color;
+
     &:hover,
     &:focus {
       color: $link-hover-color;
+
       & > .active > a,
       & > .active > a:hover,
       & > .active > a:focus {
         color: $link-active-color;
-      }     
+      }
     }
   }
+
   .container {
     display: flex;
     justify-content: flex-end;
@@ -39,5 +45,6 @@
     font-size: 3rem;
     color: $background-color;
   }
+
   margin-right: auto;
 }

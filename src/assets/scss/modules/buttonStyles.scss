@@ -33,6 +33,7 @@ $button-padding: 15px;
 .number {
   background-color: $background-color-nav;
   padding: $button-padding;
+
   &[value] {
     color: white;
   }
