@@ -1,11 +1,12 @@
+import React from 'react';
 import './assets/scss/App.scss';
-import RenderCalculator from './components/RenderCalculator';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <main>
-      <RenderCalculator />
-    </main>
+    <>
+      <Navigation />
+    </>
   );
 }
 

@@ -1,0 +1,13 @@
+@import "./mixins";
+
+.home {
+  margin: 3% 10%;
+
+  p {
+    padding: 1rem 0;
+    color: $text-color;
+    font-size: 1.3rem;
+  }
+
+  background-color: $background-color;
+}
