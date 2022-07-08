@@ -3,21 +3,23 @@ import { useState, useEffect } from 'react';
 import RenderCalculator from './RenderCalculator';
 
 const Navigation = () => (
-  <div className="navbar">
-    <div className="container">
-      <span className="title"><h1>Math Magicians</h1></span>
-      <ul className="navbar-nav ">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/calculator">Calculator</Link></li>
-        <li><Link to="/quote">Quote</Link></li>
-      </ul>
+  <>
+    <div className="navbar">
+      <div className="container">
+        <span className="title"><h1>Math Magicians</h1></span>
+        <ul className="navbar-nav ">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/calculator">Calculator</Link></li>
+          <li><Link to="/quote">Quote</Link></li>
+        </ul>
+      </div>
     </div>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/calculator" element={<Calculator />} />
       <Route path="/quote" element={<Quote />} />
     </Routes>
-  </div>
+  </>
 );
 
 export default Navigation;
@@ -75,13 +77,12 @@ const Quote = () => {
     const storedData = await getQuoteData();
     if (!text) {
       setText(storedData.quote);
-      // console.log(text);
     }
   };
 
   useEffect(() => {
     setQuoteData();
-  });
+  }, []);
 
   return (
     <div className="quote">
