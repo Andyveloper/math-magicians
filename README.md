@@ -9,7 +9,7 @@
 ## Website Name
 
 - [Heroku Deployment](https://math-magicians-reactjstest.herokuapp.com/)
-- [Netlify Deployment][https://math-magicians-react-zeraltz.netlify.app]
+- [Netlify Deployment](https://math-magicians-react-zeraltz.netlify.app)
 
 ## Project Website (GitHub Pages)
 
