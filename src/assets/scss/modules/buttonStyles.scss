@@ -35,7 +35,7 @@ $button-padding: 15px;
   padding: $button-padding;
 
   &[value] {
-    color: white;
+    color: $link-color;
   }
 
   &:hover {
