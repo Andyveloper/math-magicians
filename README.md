@@ -1,10 +1,10 @@
 # Project Name
 
-- First Capstone Project
+- React JS exercise
 
 ## Website Name
 
-- Animation Fans!
+- Math Magicians
 
 ## Website Deployments
 
